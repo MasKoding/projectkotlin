@@ -11,14 +11,23 @@ fun sayHello(firstName:String,lastName:String=""){
 // buat function untuk menampilkan brand mobil
 // brand : Almaz  ->default tahun:2022
 // year:2022
- fun showCar(brand:String, year:Int=2022){
+ fun showCar(brand:String, year:Int=2022) {
     println("Brand : $brand Year: $year")
  }
 
-fun biodata(name:String, age:Int,identityCode:Int,address:String){
+fun biodata(name:String, age:Int,identityCode:Int,address:String) :Unit{
     println(" Name :$name \n Age:$age \n Identity Code: $identityCode \n" +
             "Address : $address")
 }
+
+fun sayName(name:String? =null) :Unit {
+    if(name == null){
+        println("Hello bro!")
+    }else{
+        println("Hello $name")
+    }
+}
+
 fun main() {
     hello()
     sayGoodBye()
@@ -26,5 +35,6 @@ fun main() {
     sayHello("Bill")
     showCar("Almaz")
     biodata(identityCode=123456,name="Steve",address="NewYork",age=50)
+    sayName()
 }
 
